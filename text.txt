@@ -1,3 +1,0 @@
-plain text.
-new line feed.
-OK.
