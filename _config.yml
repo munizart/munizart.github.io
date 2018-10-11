@@ -7,13 +7,13 @@ permalink:        pretty
 
 # Setup
 title:            Munizart
-tagline:          'JavaScript and cheap talks'
-description:      'Artur Muniz\'s personal blog, where I will be posting about front-end programming'
+tagline:          "JavaScript and cheap talks"
+description:      "Artur Muniz's personal blog, where I will be posting about front-end programming"
 url:              https://munizart.github.io/
 
 author:
-  name:           'Artur Muniz'
-  url:            https://munizart.github.io/munizart
+  name:           "Artur Muniz"
+  url:            "https://munizart.github.io/munizart"
 
 paginate:         5
 
