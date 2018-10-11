@@ -1,7 +1,7 @@
-----
--layout: "post"
--title: "Introducing IdleComp. Composing even when urgent"
-----
+---
+layout: "post"
+title: "Introducing IdleComp. Composing even when urgent"
+---
 
 ### What this post is about?
 Few weeks ago, Philip Walton from google, posted an article named
