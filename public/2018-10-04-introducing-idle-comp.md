@@ -67,4 +67,19 @@ and your `registerComponents` is now impure.
 Worst yet, you need to call `enforceModalComponent` every time
 you want to use a modal component =[
 
+Now, imagine that you need to optimize more components, imagine having one `idleCallbackId` and one `registredYet` like variables for each component. It simplily won't scale.
 
+### Entering the IdleComp
+
+Now, what if instead of having all this state to manage you could simply have a data type that look like a promise,
+something you're familiar with, to help you deal with all this asynchronism?
+
+```javascript
+import IdleComp from 'idle-comp'
+
+const idleModal = IdleComp
+  .of(undefined) // initial value, in this example anything will do, so we pass nothing
+  .map(registerModalComponent)
+```
+
+So every time you want to show a modal the only thing you need to do is call `idleModal.returns()`. And if `registerModalComponent` wasn't called yet it will be called sinchronously.
