@@ -3,7 +3,7 @@ layout: "post"
 title: "Introducing IdleComp. Composing even when urgent"
 ---
 
-### What this post is about?
+### What is this post about?
 Few weeks ago, Philip Walton from google, posted an article named
 "[Idle Until Urgent](https://philipwalton.com/articles/idle-until-urgent/)" showing how
 First Input Delay (FID) impacts user's perception on web perfomance.
@@ -17,13 +17,13 @@ On this blog post I'll cover:
 ### `requestIdleCallback`
 
 On his article Walton introduces us to `requestIdleCallback`,
-a simple WebAPI made of just two functions (`requestIdleCallback` and `cancelIdleCallback`).
+a simple two-functions WebAPI (`requestIdleCallback` and `cancelIdleCallback`).
 
-But, how does it works?
+But, how does it work?
 `requestIdleCallback` takes one argument, a function, and returns a numeric id.
 It behaves much like `setTimeout`, but instead of calling your function after a
 given time it will call your function when the browser is doing no work.
-That means that browser's takes can take priority over your's.
+That means that browser's takes can take priority over yours.
 
 ```javascript
 requestIdleCallback(function () {
@@ -34,7 +34,7 @@ requestIdleCallback(function () {
 
 But dealing with this kind of asynchronism is a little bit tricky.
 
-Let me show you a example.
+Let me show you an example.
 Imagine that you decided to optimize your site to only execute
 your `registerModalComponent` task when it has nothing else to do.
 
@@ -45,8 +45,8 @@ function registerComponents () {
 }
 ```
 
-You run the firsts tests and everything is working like a charm.
-Few months later, your client calls you and say something like
+You run the first tests and everything is working like a charm.
+Few months later, your client calls you and says something like
 
 > Hi, the modals aren't working anymore,
 everytime I reload the page and click at the "show modal" botton nothing happens.
@@ -86,7 +86,7 @@ you want to use a modal component =[
 
 Now, imagine that you need to optimize more components,
 imagine having one `idleCallbackId` and one `registredYet` like
-variables for each component. It simplily won't scale.
+variables for each component. It simply won't scale.
 
 ### Entering the IdleComp
 
@@ -137,12 +137,12 @@ a algebric data type that allows you while wrapping a value abstract a behaviour
 
 ### Non-blocking code
 
-In regular javascript there is one thread where all code are executed and if
-your functions takes to long to execute it will block this thread.
+In regular javascript there is one thread where all tasks are executed and if
+your function takes too long to execute it will block this thread.
 Actually, the problem gets even worst as not only user land code is ran in this thread!
 Some browser code will be competing with yours.
 
-Generally, the long a funciton is the long a functions takes to execute.
+Generally, the long a function is the long a functions takes to execute.
 So if break your code into small functions and compose they togheter and take advantage of some
 asynchronism you won't be blocking the main thread for long.
 
@@ -150,7 +150,7 @@ asynchronism you won't be blocking the main thread for long.
 A nice thing about `IdleComp` is that `IdleComp.of(10).map(add2).map(divideBy3)`
 is equivalent to `IdleComp.of(10).map(x => divedBy3(add2))`.
 This is composition, an operation over two functions that gives you a new one that
-takes the results of the first functions and passes it as a argument to next one.
+takes the results of the first functions and passes it as an argument to next one.
 
 You can learn more about composition and functional programming on this [wonderfull
 article from Eric Elliot](https://medium.com/javascript-scene/composing-software-an-introduction-27b72500d6ea).
@@ -171,5 +171,5 @@ thread by composing small functions togheter.
 On the next post we will see another `IdleComp`'s method: `flatMap`.
 
 Stay tuned,
-Tank you for reading.
+Thank you for reading.
 =]
