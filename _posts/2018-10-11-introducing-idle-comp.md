@@ -101,7 +101,7 @@ allowing you to write that reads like sinchronous, but computes on browser's idl
 import IdleComp from 'idle-comp'
 
 const idleModal = IdleComp
-  .of(undefined) // initial value, in this example anything will do, so we pass nothing
+  .of(undefined) // initial value, in this example we pass nothing as next function doesn't require an arguments
   .map(registerModalComponent)
 ```
 
@@ -166,9 +166,7 @@ on user demand and we shaw how bad it can goes if we don't abstract `requestIdle
 We also learned about `IdleComp`, a promise-like abstraction for idle computation
 that permits us to write idle computations that doesn't block the browser's main
 thread by composing small functions togheter.
-
-### Next time
-On the next post we will see another `IdleComp`'s method: `flatMap`.
+You can read more on `IdleComp` on project's [home page](http://munizart.github.io/idle-comp).
 
 Stay tuned,
 Thank you for reading.
