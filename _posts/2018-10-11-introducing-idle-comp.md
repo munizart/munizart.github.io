@@ -1,6 +1,15 @@
 ---
 layout: "post"
 title: "Introducing IdleComp. Composing even when urgent"
+description: "A functional implementation for the idle-until-urgent pattern"
+tags:
+ - "requestIdleCallback"
+ - "Idle Until Urgent"
+ - "idle-until-urgent"
+ - "javascript"
+ - "front-end"
+ - "programming"
+ - "functional programming"
 ---
 
 ### What is this post about?
@@ -10,7 +19,7 @@ First Input Delay (FID) impacts user's perception on web perfomance.
 
 On this blog post I'll cover:
 * What is `requestIdleCallback`
-* Idle Until Urgent philosophy
+* Idle Until Urgent pattern
 * Non-blocking code
 * and finally, Composition
 
