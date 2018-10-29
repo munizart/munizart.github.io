@@ -27,11 +27,20 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
   <!-- SOCIAL -->
+  
+  <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="ArturMunizJr">
+    <meta name="twitter:site" content="ArturMunizJr">
+  <!-- /Twitter Meta Tags -->
+  
   <meta content="{{ site.title }}" property="og:site_name">
   {% if page.title %}
     <meta content="{{ page.title }}" property="og:title">
+    <meta content="{{ page.title }}" name="twitter:title">
   {% else %}
     <meta content="{{ site.title }}" property="og:title">
+    <meta content="{{ site.title }}" name="twitter:title">
   {% endif %}
   {% if page.title %}
   <meta content="article" property="og:type">
@@ -40,10 +49,10 @@
   {% endif %}
   {% if page.description %}
     <meta content="{{ page.description }}" property="og:description">
-    <meta name="twitter:description" content="{{ page.description }}">
+    <meta content="{{ page.description }}" name="twitter:description">
   {% else %}
     <meta content="{{ site.description }}" property="og:description">
-    <meta name="twitter:description" content="{{ site.description }}">
+    <meta content="{{ site.description }}" name="twitter:description">
   {% endif %}
   {% if page.url %}
     <meta content="{{ site.url }}{{ page.url }}" property="og:url">
@@ -52,8 +61,8 @@
     <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     <meta content="{{ site.url }}/about/" property="article:author">
   {% endif %}
-  <meta name="og:image" content="https://picography.co/wp-content/uploads/2016/12/black-coffee-laptop-macbook-wood-table-desk-cup-saucer.jpg">
-  <meta name="twitter:image" content="https://picography.co/wp-content/uploads/2016/12/black-coffee-laptop-macbook-wood-table-desk-cup-saucer.jpg">
+  <meta content="https://picography.co/wp-content/uploads/2016/12/black-coffee-laptop-macbook-wood-table-desk-cup-saucer.jpg" property="og:image" >
+  <meta content="https://picography.co/wp-content/uploads/2016/12/black-coffee-laptop-macbook-wood-table-desk-cup-saucer.jpg" name="twitter:image">
   {% if page.categories %}
     {% for category in page.categories limit:1 %}
       <meta content="{{ category }}" property="article:section">
@@ -64,12 +73,4 @@
       <meta content="{{ tag }}" property="article:tag">
     {% endfor %}
   {% endif %}
-  
-
-  <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="ArturMunizJr">
-    <meta name="twitter:site" content="ArturMunizJr">
-    <meta name="twitter:title" content="PolitiCartas - Compare as propostas dos presidenciáveis">
-    <!-- /Twitter Meta Tags -->
 </head>
