@@ -31,7 +31,7 @@
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
     </script>
     <script type="text/javascript">
-      var pageTracker = _gat._getTracker("{{ tracker }}");
+      var pageTracker = _gat._getTracker("{{ site.tracker }}");
       pageTracker._initData();
       pageTracker._trackPageview();
     </script>
@@ -42,7 +42,7 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', '{{ tracker }}', 'auto');
+    ga('create', '{{ site.tracker }}', 'auto');
     ga('send', 'pageview');
   </script>
   </body>
