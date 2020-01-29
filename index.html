@@ -13,7 +13,10 @@ layout: default
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {{ post.content }}
+    {{ post.description }}
+    {% if post.description != post.content %}
+      <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+    {% endif %}
   </div>
   {% endfor %}
 </div>
