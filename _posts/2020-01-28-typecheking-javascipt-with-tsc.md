@@ -19,6 +19,8 @@ If so, this post is for you!
 This tutorial will show how you can use typescript's compiler to check your
 javascript code and how to use global type definitions to describe your types.
 
+[TL;DR](#tldr)
+
 ### Let's do it!
 To start, on a new folder, we create a `package.json` file:
 ```json
@@ -276,6 +278,6 @@ To wrap up what we've learned
 4. imported `@types/node`, `ramda` `@types/ramda`
 5. created a small cli and compiled it using that npm script
 
-I hope this tutorial was helpfull. You can reach me out at [https://github.com/munizart](@munizart) and [https://twitter.com/hurricanecart](@hurricanecart).
+I hope this tutorial was helpfull. You can reach me out at [@munizart](https://github.com/munizart) and [@hurricanecart](https://twitter.com/hurricanecart).
 
 Thank you for reading.
